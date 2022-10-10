@@ -1,0 +1,49 @@
+table {
+  min-width: 500px;
+  overflow-x: scroll;
+  
+  thead {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+  tr {
+    float: left;
+    width: 100%;
+
+    td {
+      word-break: break-all;
+    }
+    
+    th, td {
+        float: left;
+
+        &:first-child {
+        width: 20% !important;
+
+        & + td, & + th {
+          width: 25% !important;
+          
+          & + td, & + th {
+            width: 20% !important;
+
+            & + td, & + th {
+              width: 10% !important;
+
+              & + td, & + th {
+                width: 25% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.responsive {
+  height: 80vh;
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
